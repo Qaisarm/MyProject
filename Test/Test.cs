@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using MyProject;
 using MyProject.Controllers;
@@ -28,6 +29,14 @@ namespace Test
         {
             var responce = _controller.Get();
             Assert.NotNull(responce);
+        }
+
+
+        [Fact]
+        public void Check_WeatherForecastOkActionResult()
+        {
+            var responce = _controller.GetWithActionResult();
+            Assert.IsType<OkObjectResult>(responce.Result);
         }
     }
        
