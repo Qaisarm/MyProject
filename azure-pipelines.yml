@@ -37,7 +37,7 @@ steps:
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'MyFirstAPI
+    ArtifactName: 'MyFirstAPI'
 '
   
   
