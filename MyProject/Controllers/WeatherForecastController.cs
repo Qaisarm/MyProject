@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 namespace MyProject.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
@@ -36,7 +36,7 @@ namespace MyProject.Controllers
             .ToArray();
         }
 
-        [HttpPost]
+        [HttpGet('withactionresult')]
         public ActionResult<IEnumerable<WeatherForecast>> GetWithActionResult()
         {
             var rng = new Random();
