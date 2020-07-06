@@ -24,3 +24,20 @@ steps:
 
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
+
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: publish
+    publishWebProjects: Flase
+    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+    zipAfterPublish: 
+
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArticactStagingDirectory)'
+    ArtifactName: 'MyFirstAPI
+'
+  
+  
