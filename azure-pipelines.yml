@@ -38,6 +38,3 @@ steps:
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'MyFirstAPI'
-'
-  
-  
