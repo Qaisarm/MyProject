@@ -36,7 +36,7 @@ namespace MyProject.Controllers
             .ToArray();
         }
 
-        [HttpGet('withactionresult')]
+        [HttpGet("withactionresult")]
         public ActionResult<IEnumerable<WeatherForecast>> GetWithActionResult()
         {
             var rng = new Random();
